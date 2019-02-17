@@ -15,32 +15,14 @@
 
   <ion-item *ngFor="let amigo of amigos">
     <ion-label>
-      <img [src]="amigo.imagem_do_perfil" class="lista-img" alt="">
+      <img [src]="amigo.imagem_do_perfil" class="lista-img">
       <span class="lista-usuario">{{amigo.usuario}}</span>
     </ion-label>
 
     <!--(ionChange)="checkBox" - As caixas de seleção permitem a seleção de várias opções de um conjunto de opções. 
     Eles aparecem como marcados (marcados) quando ativados.
     Clicar em uma caixa de seleção irá alternar a checkedpropriedade.  -->
-    <ion-checkbox item-right color="primary" (ionChange)="checkBox(ammigo.usuario)" checkbox="false"></ion-checkbox>
+    <ion-checkbox item-right color="primary" (ionChange)="checkBox(amigo.usuario)" checkbox="false"></ion-checkbox>
   </ion-item>
 
 </ion-content>
-
-<!-- Rodapé -->
-<ion-footer>
-  <ion-toolbar>
-    <!-- barra de ferramentas -->
-    <ion-buttons start left>
-      <button ion-button icon-right color="black">
-        <ion-icon name="images"></ion-icon>
-      </button>
-    </ion-buttons>
-    <ion-input type="text" value=""></ion-input>
-    <ion-buttons end>
-      <button ion-button icon-right color="black">
-        <ion-icon name="heart-outline"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>

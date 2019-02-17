@@ -43,7 +43,7 @@ export class NovaMenssagemPage {
   }
 
   checkBox(usuario : string){
-    console.log('Usuario: ' + usuario);
+    console.log('usuario: ' + usuario);
     this.entrada_visivel = true;
   }
 
