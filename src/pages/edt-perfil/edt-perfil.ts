@@ -28,7 +28,7 @@ export class EdtPerfilPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl : ViewController, public loadingCtrl : LoadingController) {
   }
-
+//  dismiss - Dispensar o viewController atual
   dismiss(){
     this.viewCtrl.dismiss();
   }

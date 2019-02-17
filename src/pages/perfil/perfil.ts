@@ -1,17 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-import { PostPage } from '../post/post';
 import { EdtPerfilPage } from '../edt-perfil/edt-perfil';
 import { PerfilMarcadoPage } from '../perfil-marcado/perfil-marcado';
 import { OpcaoPerfilPage } from '../opcao-perfil/opcao-perfil';
 import { PerfilSalvoPage } from '../perfil-salvo/perfil-salvo';
-
-/**
- * Generated class for the PerfilPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -139,7 +131,7 @@ export class PerfilPage {
     modal.present();
   }
   goOps() {
-    this.navCtrl.push(OpcaoPerfilPage, {});
+    this.navCtrl.push(OpcaoPerfilPage);
   }
   goPerfilMarcado() {
     this.navCtrl.push(PerfilMarcadoPage);
@@ -147,20 +139,6 @@ export class PerfilPage {
   goPerfilSalvo() {
     this.navCtrl.push(PerfilSalvoPage);
   }
-  // Aciona quando o usuário pressiona uma postagem
-  pressionaFoto(id: number, usuario: string, perfil_do_usuario: string, imagem_postada: string) {
-    this.presentModal(id, usuario, perfil_do_usuario, imagem_postada);
-  }
-  presentModal(id: number, usuario: string, perfil_do_usuario: string, imagem_postada: string) {
-    let modal = this.modalCtrl.create(PostPage,
-      {
-        id: id,
-        usuario: usuario,
-        perfil_do_usuario: perfil_do_usuario,
-        imagem_postada: imagem_postada
-      },
-      { showBackdrop : true, enableBackdropDismiss : true}); 
-      modal.present();
-  }
+ 
 }
 

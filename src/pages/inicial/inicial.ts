@@ -85,7 +85,7 @@ export class InicialPage {
     }
   }
   role_de_cima(){
-    this.content.scrollToTop();
+    this.content.scrollToTop(); // Rola até o topo do componente
   }
 
 }

@@ -9,7 +9,6 @@ import { PerfilMarcadoPage } from '../pages/perfil-marcado/perfil-marcado';
 import { PesquisaPage } from '../pages/pesquisa/pesquisa';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { InicialPage } from '../pages/inicial/inicial';
-import { PostPage } from '../pages/post/post';
 import { EdtPerfilPage } from '../pages/edt-perfil/edt-perfil';
 import { OpcaoPerfilPage } from '../pages/opcao-perfil/opcao-perfil';
 import { Camera } from '@ionic-native/camera/ngx';
@@ -19,6 +18,7 @@ import { NotificacaoPage } from '../pages/notificacao/notificacao';
 import { NovaMenssagemPage } from '../pages/nova-menssagem/nova-menssagem';
 import { DetalheMenssagemPage } from '../pages/detalhe-menssagem/detalhe-menssagem';
 import { PostarPopover } from '../pages/inicial/postar-popover';
+import { PerfilSalvoPage } from '../pages/perfil-salvo/perfil-salvo';
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +26,6 @@ import { PostarPopover } from '../pages/inicial/postar-popover';
     PesquisaPage,
     PerfilPage,
     InicialPage,
-    PostPage,
     EdtPerfilPage,
     OpcaoPerfilPage,
     MenssagemPage,
@@ -34,7 +33,8 @@ import { PostarPopover } from '../pages/inicial/postar-popover';
     NotificacaoPage,
     NovaMenssagemPage,
     DetalheMenssagemPage,
-    PostarPopover
+    PostarPopover, 
+    PerfilSalvoPage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +48,6 @@ import { PostarPopover } from '../pages/inicial/postar-popover';
     PesquisaPage,
     PerfilPage,
     InicialPage,
-    PostPage,
     EdtPerfilPage,
     OpcaoPerfilPage,
     MenssagemPage,
@@ -56,7 +55,8 @@ import { PostarPopover } from '../pages/inicial/postar-popover';
     NotificacaoPage,
     NovaMenssagemPage,
     DetalheMenssagemPage,
-    PostarPopover
+    PostarPopover,
+    PerfilSalvoPage
   ],
   providers: [
     StatusBar,

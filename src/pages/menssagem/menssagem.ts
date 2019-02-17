@@ -3,13 +3,6 @@ import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { NovaMenssagemPage } from '../nova-menssagem/nova-menssagem';
 import { DetalheMenssagemPage } from '../detalhe-menssagem/detalhe-menssagem';
 
-/**
- * Generated class for the MenssagemPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-menssagem',
