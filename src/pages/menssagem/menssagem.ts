@@ -48,14 +48,14 @@ export class MenssagemPage {
     }
   ]
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private app: App) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   goNovaMensagem(){
-    this.app.getRootNav().push(NovaMenssagemPage);
+    this.navCtrl.push(NovaMenssagemPage);
   }
 
   goMensagem(remetente : string, imagem_do_perfil : string, ultima_mensagem : string ){
-    this.app.getActiveNav().push(DetalheMenssagemPage, { rementend: remetente, imagem_do_perfil: imagem_do_perfil, ultima_menssagem: ultima_mensagem});
+    this.navCtrl.push(DetalheMenssagemPage, { rementend: remetente, imagem_do_perfil: imagem_do_perfil, ultima_menssagem: ultima_mensagem});
   }
 }

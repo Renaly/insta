@@ -49,7 +49,7 @@ export class InicialPage {
 
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController, public app: App) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
   }
   likeBotao(){
     if(this.like_btn.nome_do_icone === 'heart-outline'){
@@ -73,7 +73,7 @@ export class InicialPage {
      popover.present();
   }
   goMensagens(){
-    this.app.getRootNav().push(MenssagemPage);
+    this.navCtrl.push(MenssagemPage);
   }
   swipePage(evento){
     if(evento.direction === 1){ //Desliza para a esquerda
