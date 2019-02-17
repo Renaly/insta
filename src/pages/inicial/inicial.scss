@@ -1,0 +1,61 @@
+page-inicial { 
+    $grid-padding-width: 1px !default;
+    ion-title{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 90px 1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .story{
+        white-space: nowrap;
+        height: 105px;
+    }
+    .story_scroll{
+        display: inline-block;
+        width: 70px;
+        margin: 10px;
+    }
+    .story_img_{
+        width: 70px;
+        padding: 4px;
+        border-radius: 50%;
+        padding-bottom: 0;
+        transition: all 1s;
+        -webkit-transition: all 0.2s;
+        background: -webkit-linear-gradient(left top, crimson 0%, #f90 100%);
+    }
+    .story_img_:active{
+        background: -webkit-linear-gradient(left top, #DD2352 0%, #F1642F 100%);
+        transform: scale(1.1)
+    }
+    .story-img{
+        width: 70px;
+        border-radius: 65%;
+    }
+    .story-text{
+        //propriedade especifica como o espaço em branco dentro de um elemento é manipulado.
+        white-space: nowrap;
+        //propriedade especifica o que deve acontecer se o conteúdo ultrapassar a caixa de um elemento.
+        overflow: hidden;
+        //propriedade especifica como o conteúdo excedido que não é exibido deve ser sinalizado para o usuário
+        text-overflow: ellipsis;
+        margin-top: 3px;
+    }
+    .card-content {
+        padding: 0px 16px;
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    .icon-space{
+        margin-right: 0.5rem;
+    }
+    .like{
+        margin: 0px;
+    }
+    .col{
+        padding: 0px;
+    }
+}

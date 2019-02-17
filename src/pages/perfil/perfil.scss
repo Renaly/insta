@@ -1,0 +1,70 @@
+page-perfil {
+    .avatar{
+        border-radius: 100%;
+        position: absolute;
+    }
+    .badge-container{
+        position: relative;
+    }
+    .custom-badge{
+        position: absolute;
+        top: 5px;
+        left: 15px;
+        background: map-get($colors, danger );
+        border-radius: 100%;
+        color: white;
+        font-size: 12px !important;
+        padding: 4px;
+        font-weight: bold;
+    }
+    .inf{
+        padding-top: 4px;
+    }
+    /* Botão de edição de perfil */
+    .edt-butão{
+        background: white;
+        border: 1px solid #ccc;
+        font-size: 13px;
+        border-radius: 3px;
+        padding: 5px;
+        font-weight: bold;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin-left: 10rem;
+    }
+    .edt-but:active{
+        border-color: #dce2ed;
+    }
+    .story{
+        white-space: nowrap;
+        height: 105px;
+    }
+    .story_scroll{
+        display: inline-block;
+        width: 70px;
+        margin: 10px;
+    }
+    .story_img_{
+        width: 70px;
+        padding: 4px;
+        border-radius: 50%;
+        padding-bottom: 0;
+        transition: all 1s;
+        -webkit-transition: all 0.2s;
+        color: white;
+    }
+    .story-img{
+        width: 70px;
+        border-radius: 65%;
+    }
+    .story-text{
+        //propriedade especifica como o espaço em branco dentro de um elemento é manipulado.
+        white-space: nowrap;
+        //propriedade especifica o que deve acontecer se o conteúdo ultrapassar a caixa de um elemento.
+        overflow: hidden;
+        //propriedade especifica como o conteúdo excedido que não é exibido deve ser sinalizado para o usuário
+        text-overflow: ellipsis;
+        margin-top: 3px;
+    }
+}

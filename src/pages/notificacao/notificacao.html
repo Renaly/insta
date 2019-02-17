@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-segment [(ngModel)]="pagina">
+    <ion-segment-button value="seguindo">
+      SEGUINDO
+    </ion-segment-button>
+    <ion-segment-button value="voce">
+      VOCÊ
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="pagina">
+    <!-- seguindo -->
+    <ion-list *ngSwitchCase="'seguindo'">
+      <ion-item no-lines text-wrap>
+        <ion-avatar item-left>
+          <img
+            src="https://instagram.fcpv3-1.fna.fbcdn.net/vp/e9aa57182f719108e730398184d7bc74/5CED183A/t51.2885-15/sh0.08/e35/p640x640/26385567_1490819531016907_5876316615926087680_n.jpg?_nc_ht=instagram.fcpv3-1.fna.fbcdn.net">
+        </ion-avatar>
+        <p><b>lima.l</b> Gostou de 2 postagem.<ion-note> 7 m</ion-note>
+        </p>
+        <ion-row>
+          <ion-col>
+            <img
+              src="https://instagram.fcpv3-1.fna.fbcdn.net/vp/f8f9951669c10986535ee1785b682045/5CFC9F26/t51.2885-15/e35/46190950_512122299196573_7114255725416463975_n.jpg?_nc_ht=instagram.fcpv3-1.fna.fbcdn.net"
+              class="post-img">
+          </ion-col>
+          <ion-col>
+            <img
+              src="https://instagram.fcpv3-1.fna.fbcdn.net/vp/efc33a91b2936bcfcb3f8284e0c5258c/5CF5DC86/t51.2885-15/sh0.08/e35/p750x750/46413961_274797753179470_4645864606374103063_n.jpg?_nc_ht=instagram.fcpv3-1.fna.fbcdn.net"
+              class="post-img">
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+    </ion-list>
+
+    <!-- você -->
+    <ion-list *ngSwitchCase="'voce'">
+      <ion-item no-lines text-wrap>
+        <ion-avatar item-left>
+          <img
+            src="https://instagram.fcpv3-1.fna.fbcdn.net/vp/c85a18782661056baed34ca13b2b0590/5CED5438/t51.2885-15/e35/45597883_316973259156040_6853705022909311788_n.jpg?_nc_ht=instagram.fcpv3-1.fna.fbcdn.net">
+        </ion-avatar>
+        <p><b>brenox-ferreira</b> começou a seguir você.<ion-note> 4 m</ion-note>
+        </p>
+      </ion-item>
+
+      <ion-item no-lines text-wrap>
+        <ion-avatar item-left>
+          <img
+            src="https://instagram.fcpv3-1.fna.fbcdn.net/vp/652e94ae0e209a9506bed651bd90694b/5CF65E2C/t51.2885-15/e35/50844780_349392738997393_2601046909666748283_n.jpg?_nc_ht=instagram.fcpv3-1.fna.fbcdn.net"
+            alt="">
+        </ion-avatar>
+        <p><b>Eros.Eros</b> começou a seguir você.<ion-note> 3 d
+          </ion-note>
+        </p>
+      </ion-item>
+
+      <ion-item no-lines text-wrap>
+        <ion-avatar item-left>
+          <img
+            src="https://instagram.fcpv3-1.fna.fbcdn.net/vp/e9aa57182f719108e730398184d7bc74/5CED183A/t51.2885-15/sh0.08/e35/p640x640/26385567_1490819531016907_5876316615926087680_n.jpg?_nc_ht=instagram.fcpv3-1.fna.fbcdn.net">
+        </ion-avatar>
+        <p><b>lima.l</b> começou a seguir você.<ion-note> 10 d</ion-note>
+        </p>
+      </ion-item>
+
+    </ion-list>
+  </div>
+
+</ion-content>

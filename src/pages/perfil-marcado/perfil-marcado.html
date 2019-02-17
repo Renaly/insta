@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Fotos de você</ion-title>
+    <ion-buttons end right>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 class="grade-de-imagens" *ngFor="let imagem of imagens">
+        <img [src]="imagem.imagem_postada" alt="">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

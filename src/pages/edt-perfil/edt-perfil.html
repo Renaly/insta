@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start left>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Editar Perfil</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="atualizarPerfil()">
+        <ion-icon name="checkmark" color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- foto do perfil -->
+  <div text-center>
+    <img [src]="dados_do_usuario.perfil_do_usuario" class="editar-avatar" alt="">
+    <p class="mudar-texto">Alterar Foto</p>
+  </div>
+
+  <!-- formato -->
+  <ion-item>
+    <ion-label>
+      <ion-icon name="clipboard" color="gray"></ion-icon>
+    </ion-label>
+    <ion-input type="text" [value]="dados_do_usuario.nome_sobrenome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <ion-icon name="person" color="gray"></ion-icon>
+    </ion-label>
+    <ion-input type="text" [value]="dados_do_usuario.usuario"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <ion-icon name="globe" color="gray"></ion-icon>
+    </ion-label>
+    <ion-input type="text" [value]="dados_do_usuario.website"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <ion-icon name="bookmarks" color="gray"></ion-icon>
+    </ion-label>
+    <ion-input placeholder="" [value]="dados_do_usuario.descricao"></ion-input>
+  </ion-item>
+
+  <!-- formulário de informação privada -->
+  <div margin-top padding-top>
+    <h4 no-margin no-padding class="inf-text">Informações Privadas</h4>
+    <hr class="customizar-hr" color="gray">
+  </div>
+  <ion-item>
+    <ion-label>
+      <ion-icon name="mail" color="gray"></ion-icon>
+    </ion-label>
+    <ion-input type="text" [value]="dados_do_usuario.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <ion-icon name="phone-portrait" color="gray"></ion-icon>
+    </ion-label>
+    <ion-input type="text" [value]="dados_do_usuario.telefone"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <ion-icon name="transgender"></ion-icon>
+    </ion-label>
+    <ion-select class="customizar-select" [(ngModel)]="dados_do_usuario.genero">
+      <ion-option value="masculino">Masculino</ion-option>
+      <ion-option value="feminino">Feminino</ion-option>
+      <ion-option value="nenhum">Não Especificado</ion-option>
+    </ion-select>
+  </ion-item>
+
+</ion-content>

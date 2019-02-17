@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar color="white">
+    <ion-title>{{ remetente }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-note>
+    <p text-center no-padding no-margin>Fervereiro 15, 09:32 PM</p>
+  </ion-note>
+
+  <!-- remetente -->
+  <ion-item no-lines no-margin no-padding text-wrap>
+    <ion-avatar item-left>
+      <img [src]="imagem_do_perfil">
+    </ion-avatar>
+    <div class="chat">Iae doido</div>
+  </ion-item>
+
+  <!-- eu -->
+  <ion-item no-lines no-margin no-padding text-wrap>
+    <ion-avatar item-right>
+      <img src="https://avatars2.githubusercontent.com/u/43497999?s=400&u=6b7710bd68036fd793eac868ccb059567cc86455&v=4">
+    </ion-avatar>
+    <div margin-left class="chat-box">Iae, de boa?</div>
+  </ion-item>
+
+  <ion-item no-lines no-margin no-padding text-wrap>
+    <ion-avatar>
+      <img [src]="imagem_do_perfil">
+    </ion-avatar>
+    <div class="chat">{{ultima_menssagem}}</div>
+  </ion-item>
+
+  <!-- Coração, ícone -->
+  <ion-item no-lines no-margin no-padding text-wrap *ngIf="enviar_como_icone" item-right>
+    <ion-avatar item-right>
+      <img src="https://avatars2.githubusercontent.com/u/43497999?s=400&u=6b7710bd68036fd793eac868ccb059567cc86455&v=4">
+    </ion-avatar>
+    <div tex-right [ngClass]="{'like_msg_botao' : like_botao_visivel }">
+      <ion-icon name="heart" [ngClass]="{'like_botao' : like_botao_visivel, 'heart-size' : true }" color="danger">
+      </ion-icon>
+      </div>
+  </ion-item>
+</ion-content>
+<!-- Rodapé -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons start left>
+      <button ion-button icon-right color="black">
+        <ion-icon name="images"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-input text="text" value=""></ion-input>
+    <ion-buttons end>
+      <button ion-button icon-right color="black" (click)="enviarLike()">
+        <ion-icon name="heart-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Salvou</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-toolbar text-center>
+      <p>Só você pode ver o que salvou</p>
+    </ion-toolbar>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 class="grade-img" *ngFor="let imagem of imagens">
+          <img [src]="imagem.imagem_postada" alt="">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

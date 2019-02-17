@@ -1,0 +1,10 @@
+<ion-content>
+  <ion-searchbar class="pesquisa" (input)="getItens($event)"></ion-searchbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let imagem of imagens" class="img" col-4>
+        <img [src]="imagem.imagem_postada">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

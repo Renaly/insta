@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-navbar color="white">
+    <ion-title>naly.ry</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="person-add" class="badge-container">
+          <span class="custom-badge">5</span>
+        </ion-icon>
+      </button>
+      <button ion-button icon-only (click)="goOps">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-row padding>
+    <!-- avatar -->
+    <ion-col col-3>
+      <img src="https://avatars2.githubusercontent.com/u/43497999?s=400&u=6b7710bd68036fd793eac868ccb059567cc86455&v=4"
+        class="avatar" alt="">
+    </ion-col>
+    <!-- informações do usuario -->
+    <ion-col col-3 text-center>
+      <h6>48</h6>
+      <p no-padding no-margin>publicações</p>
+    </ion-col>
+    <ion-col col-3 text-center>
+      <h6>1.621</h6>
+      <p>seguidores</p>
+    </ion-col>
+    <ion-col col-3 text-center>
+      <h6>1.572</h6>
+      <p>seguindo</p>
+    </ion-col>
+
+    <!-- editar e seguir botão -->
+    <ion-col no-padding no-margin text-center col-9>
+      <button class="edt-butão" (click)="goEdtPerfil()">Edite seu perfil</button>
+    </ion-col>
+  </ion-row>
+
+
+
+  <!-- informações do perfil -->
+  <div padding>
+    <p no-margin no-padding><b>Renaly Barbosa</b></p>
+    <p no-padding no-margin class="inf">Campina Grande || PB || 18y || SI - facisa 📚</p>
+  </div>
+
+  <ion-scroll class="story" scrollX="true">
+    <div class="story_scroll" *ngFor="let story of stories">
+      <div class="story_img_">
+        <img no-margin no-padding class="story-img" [src]="story.img" width="15" height="60" alt="">
+      </div>
+      <p no-margin no-padding text-center class="story-text">{{story.comentario}}</p>
+    </div>
+  </ion-scroll>
+
+  <!-- segmentos -->
+  <div>
+    <ion-segment [(ngModel)]="segmento_de_perfil">
+      <ion-segment-button value="grade">
+        <ion-icon name="apps"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="lista">
+        <ion-icon name="list"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="marcado" (click)="goPerfilMarcado()">
+        <ion-icon name="photos"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="salvo" (click)="goPerfilSalvo">
+        <ion-icon name="bookmark"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <!-- conteúdo do segmento -->
+  <div [ngSwitch]="segmento_de_perfil">
+    <ion-list *ngSwitchCase="'grade'">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4 class="grade_de_imagem" *ngFor="let imagem of imagens"
+            (press)="pressionaFoto(imagem.id, imagem.usuario, imagem.perfil_do_usuario, imagem.imagem_postada)">
+            <img [src]="imagem.imagem_postada" alt="">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+    <ion-list *ngSwitchCase="'lista'">
+
+    </ion-list>
+  </div>
+
+</ion-content>

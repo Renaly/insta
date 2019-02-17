@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="white">
+    <ion-title>Mensagens</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item no-lines *ngFor="let mensagem of mensagens" (click)="goMensagem(mensagem.remetente, mensagem.imagem_do_perfil, mensagem.ultima_mensagem)">
+      <ion-avatar item-left>
+        <img [src]="mensagem.imagem_do_perfil">
+      </ion-avatar>
+      <h2 style="font-weight:bold">{{mensagem.remetente}}</h2>
+      <p>{{mensagem.ultima_mensagem}}<ion-note item-right style="padding-left: 2px">{{mensagem.tempo}}</ion-note></p>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar (click)="goNovaMensagem">
+    <p text-center><ion-icon name="add"></ion-icon>Nova Mensagem</p>
+  </ion-toolbar>
+</ion-footer>
+
