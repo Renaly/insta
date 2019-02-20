@@ -4,15 +4,21 @@
 
   <form [formGroup]="formulario" (ngSubmit)="goCadastrar()">
     <div padding>
+
       <ion-item>
-        <ion-input #email value="" [ngClass]="{'forms': validaCampo('email')}" formControlName="email"  type="text" placeholder="email " clearInput
-        clearOnEdit="true"></ion-input>
+        <!-- o #.... é um tipo de id, ele não serve para estilizar, mas serve para você possa selecionar a tag html dentro do próprio html ou dentro do seu ts -->
+        <ion-input #email value="" [ngClass]="{'forms': validaCampo('email')}" formControlName="email" type="text"
+          placeholder="email " clearInput clearOnEdit="true"></ion-input>
+        <!-- Qualquer caixa de entrada de íons que tenha o atributo clearOnEdit definido como true apagará todo o texto quando a edição começar, independentemente de onde você tocar na caixa de entrada. -->
       </ion-item>
+
       <ion-item>
-        <ion-input #password value="" [ngClass]="{'forms': validaCampo('password')}" formControlName="password" type="text" placeholder="Senha" clearInput
-        clearOnEdit="true"></ion-input>
+        <ion-input #password value="" [ngClass]="{'forms': validaCampo('password')}" formControlName="password"
+          type="text" placeholder="Senha" clearInput clearOnEdit="true"></ion-input>
       </ion-item>
+
       <button ion-button block outline color="light" class="login-btn">Cadastrar</button>
+
     </div>
   </form>
 

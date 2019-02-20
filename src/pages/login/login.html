@@ -4,14 +4,13 @@
 
 
   <ion-item>
-    <ion-input [(ngModel)]="user.email" type="text"
-      placeholder="email" clearInput clearOnEdit="true"></ion-input>
+    <ion-input [(ngModel)]="user.email" type="text" placeholder="email" clearInput clearOnEdit="true"></ion-input>
     <!-- Qualquer caixa de entrada de íons que tenha o atributo clearOnEdit definido como true apagará todo o texto quando a edição começar, independentemente de onde você tocar na caixa de entrada. -->
   </ion-item>
 
   <ion-item>
-    <ion-input [(ngModel)]="user.password" type="password" placeholder="Senha" clearInput
-      clearOnEdit="true"></ion-input>
+    <ion-input [(ngModel)]="user.password" type="password" placeholder="Senha" clearInput clearOnEdit="true">
+    </ion-input>
   </ion-item>
 
   <button ion-button block outline color="light" class="login-btn" (click)="loginIns(user)">Login</button>
