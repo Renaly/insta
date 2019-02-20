@@ -19,6 +19,13 @@ import { NovaMenssagemPage } from '../pages/nova-menssagem/nova-menssagem';
 import { DetalheMenssagemPage } from '../pages/detalhe-menssagem/detalhe-menssagem';
 import { PostarPopover } from '../pages/inicial/postar-popover';
 import { PerfilSalvoPage } from '../pages/perfil-salvo/perfil-salvo';
+import { LoginPage } from '../pages/login/login';
+import { CadastroPage } from '../pages/cadastro/cadastro';
+import { CadastroPrincipalPage } from '../pages/cadastro-principal/cadastro-principal';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { firebaseConfig } from '../environments/environments';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     MyApp,
@@ -33,13 +40,20 @@ import { PerfilSalvoPage } from '../pages/perfil-salvo/perfil-salvo';
     NotificacaoPage,
     NovaMenssagemPage,
     DetalheMenssagemPage,
-    PostarPopover, 
-    PerfilSalvoPage
+    PostarPopover,
+    PerfilSalvoPage,
+    LoginPage,
+    CadastroPage,
+    CadastroPrincipalPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-  
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -56,13 +70,16 @@ import { PerfilSalvoPage } from '../pages/perfil-salvo/perfil-salvo';
     NovaMenssagemPage,
     DetalheMenssagemPage,
     PostarPopover,
-    PerfilSalvoPage
+    PerfilSalvoPage,
+    LoginPage,
+    CadastroPage,
+    CadastroPrincipalPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })
 export class AppModule { }

@@ -76,6 +76,7 @@
   </div>
 
   <!-- conteúdo do segmento -->
+  <!-- [NgSwitch] é usado para declarar a variável que avalia e *ngSwitchCase são os casos em que a avaliação concorda. -->
   <div [ngSwitch]="segmento_de_perfil">
     <ion-list *ngSwitchCase="'grade'">
       <ion-grid>

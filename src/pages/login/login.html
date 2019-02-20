@@ -1,0 +1,43 @@
+<ion-content padding class="transparente-header">
+
+  <img class="logo" src="https://logodownload.org/wp-content/uploads/2017/04/instagram-logo-17.png">
+
+
+  <ion-item>
+    <ion-input [(ngModel)]="user.email" type="text"
+      placeholder="email" clearInput clearOnEdit="true"></ion-input>
+    <!-- Qualquer caixa de entrada de íons que tenha o atributo clearOnEdit definido como true apagará todo o texto quando a edição começar, independentemente de onde você tocar na caixa de entrada. -->
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="user.password" type="password" placeholder="Senha" clearInput
+      clearOnEdit="true"></ion-input>
+  </ion-item>
+
+  <button ion-button block outline color="light" class="login-btn" (click)="loginIns(user)">Login</button>
+
+
+  <div class="footer" (click)="goAjuda()">
+    <span>Esqueceu seus dados de login? <strong>Obtenha ajuda para entrar.</strong></span>
+  </div>
+
+
+  <div class="ou">
+    <span>OU</span>
+  </div>
+
+
+  <button ion-button clock clear (click)="login()" color="light" class="login-btn">
+    <ion-icon name="logo-facebook"></ion-icon> Login com Facebook
+  </button>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar class="footer">
+    <div (click)=goCadastro()>
+      <span>Não tem uma conta? <strong>Cadastre-se.</strong></span>
+    </div>
+  </ion-toolbar>
+</ion-footer>

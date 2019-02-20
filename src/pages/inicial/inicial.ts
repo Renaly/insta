@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content, PopoverController, App } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content, PopoverController} from 'ionic-angular';
 import { MenssagemPage } from '../menssagem/menssagem';
 import { PostarPopover } from './postar-popover';
 

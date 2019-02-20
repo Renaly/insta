@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import { NovaMenssagemPage } from '../nova-menssagem/nova-menssagem';
 import { DetalheMenssagemPage } from '../detalhe-menssagem/detalhe-menssagem';
 

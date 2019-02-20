@@ -1,0 +1,27 @@
+<ion-content padding>
+
+  <img src="../../assets/imgs/user (1).svg">
+
+  <form [formGroup]="formulario" (ngSubmit)="goCadastrar()">
+    <div padding>
+      <ion-item>
+        <ion-input #email value="" [ngClass]="{'forms': validaCampo('email')}" formControlName="email"  type="text" placeholder="email " clearInput
+        clearOnEdit="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input #password value="" [ngClass]="{'forms': validaCampo('password')}" formControlName="password" type="text" placeholder="Senha" clearInput
+        clearOnEdit="true"></ion-input>
+      </ion-item>
+      <button ion-button block outline color="light" class="login-btn">Cadastrar</button>
+    </div>
+  </form>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="footer">
+    <div (click)="login()">
+      <span>Já tem uma conta? <strong>Faça login.</strong></span>
+    </div>
+  </ion-toolbar>
+</ion-footer>

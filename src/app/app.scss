@@ -33,3 +33,82 @@ a{
     text-decoration: none;
     color: blue;
 }
+.card{
+  width: 100vw !important;
+}
+.icon-space{
+  padding-top: 3px;
+  padding-left: 10px;
+}
+.like{
+  font-weight: bold;
+  font-family: Helvetica Neue;
+}
+.grade_de_imagem{
+  margin-bottom: -5px;
+}
+.grade_de_imagem img {
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+  filter: brightness(100%);
+}
+.grade_de_imagem:active img{
+  -webkit-filter: brightness(70%);
+  -moz-filter: brightness(70%);
+  -o-filter: brightness(70%);
+  -ms-filter: brightness(70%);
+  filter: brightness(70%);
+}
+.grade-img{
+  margin-bottom: -5px;
+}
+.grade-img img {
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+  filter: brightness(100%);
+}
+.grade-img:active img{
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+  filter: brightness(100%);
+}
+.img{
+  margin-bottom: -5px;
+}
+.img img{
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+  filter: brightness(100%);
+}
+.img:active img{
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+  filter: brightness(100%);
+}
+.grade-de-imagens{
+margin-bottom: -5PX;
+}
+.grade-de-imagens img{
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+  filter: brightness(100%);
+}
+.grade-de-imagens:active img{
+  -webkit-filter: brightness(100%);
+  -moz-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  -ms-filter: brightness(100%);
+  filter: brightness(100%);
+}

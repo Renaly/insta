@@ -1,0 +1,81 @@
+page-cadastro {
+    $transparent-white: rgba(255, 255,255, .6);
+    // Isto é apenas para tornar o cabeçalho transparente e botão / ícone com cor branca
+    .toolbar-content, span {
+        color: white;
+    }
+    .toolbar-background {
+        background: transparent !important;
+        background-color: transparent !important;
+    }
+    .header-md::after, .toolbar-background-ios{
+        background-image: none;
+        border-bottom: 0;
+    }
+    //Rodapé
+    ion-footer{
+        height: 47px;
+    }
+    .footer{
+        text-align: center;
+        background: rgba(255, 255, 255, .06);
+        min-height: 47px; 
+    }
+    .footer-md::before{
+        border-top: 1px solid $transparent-white;
+        background-image: none;
+    }
+    // Gradiente de arco-íris animado em tela cheia
+    ion-content{
+        background: linear-gradient(316deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3 );
+        background-size: 1800% 1800%;
+    }
+    @keyframes rainbow{
+        0%{
+            background-position: 0% 0%
+        }
+        50% {
+            background-position: 100% 100%
+        }
+        100%{
+            background-position: 0% 0%
+        }
+    }
+    //Conteúdo
+    .scroll-content{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .logo{
+        width:50%;
+        height: auto;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+    ion-item{
+        border-radius: 3px !important;
+        padding-left: 10px !important;
+        margin-bottom: 15px !important;
+        margin-bottom: 10px;
+        color: #fff !important;
+        background-color: rgba(255, 255,255, .2) !important;
+        font-size: 0.9em;
+    }
+    ::-webkit-input-placeholder{
+        color: white !important;
+    }
+    .item-inner{
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+    }
+    .login-btn{
+        text-transform: none;
+        border-radius: 3px !important;
+    }
+    img{
+        width: 45%;
+        margin: 0 auto;
+        margin-top: 20% !important;
+    }
+}
